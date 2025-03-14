@@ -1,4 +1,4 @@
-#N canvas 719 511 570 170 12;
+#N canvas 696 150 577 211 12;
 #X obj 29 32 vsl 20 80 -3 3 0 0 \$0-sl1o \$0-sl1i empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 52 32 vsl 20 80 -3 3 0 0 \$0-sl2o \$0-sl2i empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 75 32 vsl 20 80 -3 3 0 0 \$0-sl3o \$0-sl3i empty 0 -9 0 12 #fcfcfc #000000 #000000 0 1;
@@ -12,7 +12,7 @@
 #X obj 226 20 inlet;
 #X obj 169 125 bng 16 250 50 0 \$0-rander \$0-randerdummy r 6 8 0 8 #000000 #ffffff #ffffff;
 #X obj 148 125 bng 16 250 50 0 \$0-normer \$0-normerdummy n 6 8 0 8 #000000 #ffffff #ffffff;
-#N canvas 312 61 705 695 array-setter 1;
+#N canvas 312 61 705 695 array-setter 0;
 #X obj 292 48 r \$0-rander;
 #X obj 212 118 s \$0-sl1i;
 #X obj 212 195 s \$0-sl2i;
@@ -108,7 +108,7 @@
 #X connect 15 0 16 7;
 #X connect 16 0 17 0;
 #X restore 226 107 pd sigcollect;
-#X text 451 115 Martin Heinze;
+#X text 455 162 Martin Heinze;
 #N canvas 216 84 716 432 bank-select 0;
 #X obj 17 35 array define \$0-bank1 8;
 #X obj 17 196 array get \$0-bank1;
@@ -193,8 +193,13 @@
 #X restore 226 73 pd bank-select;
 #X obj 29 125 hradio 16 1 0 4 \$0-banksel \$0-bankseldummy Banks 68 8 0 8 #fcfcfc #000000 #000000 0;
 #X obj 127 125 bng 16 250 50 0 \$0-save \$0-savedummy s 6 8 0 8 #000000 #ffffff #ffffff;
-#X text 472 130 10.03.2025;
-#X text 353 17 lateefah abstraction can hold up to 4 presets of each 8 signal value streams \, that can offset latent inputs of nn~. The outlet is multichannel., f 27;
+#X text 343 70 lateefah abstraction can hold up to 4 presets of each 8 signal value streams \, that can offset latent inputs of nn~. The outlet is multichannel., f 29;
+#X obj 346 20 inlet;
+#X obj 346 44 s \$0-bankseldummy;
+#X text 476 177 14.03.2025;
+#X obj 409 20 loadbang;
 #X connect 10 0 13 0;
 #X connect 14 0 8 0;
+#X connect 20 0 21 0;
+#X connect 23 0 21 0;
 #X coords 0 -1 1 1 200 130 2 20 20;
