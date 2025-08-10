@@ -7,7 +7,7 @@ This repository contains abstractions written in Pure Data that mimick latent em
 ## Abstractions
 ### saatR
 <img src="./assets/saatR.png" alt="saatR" width="350" height="auto">\
-saatR generates random noise sample patterns based on predefined seeds. These patterns can be restarted via bangs to the first inlet. *Range* slider multiplies sample values, *Offset* slider shifts window of values. The pattern can be modulated by an external signal source via the second inlet (switch on Mod. toggle).
+saatR generates random noise sample patterns based on predefined seeds. These patterns can be restarted via bangs to the first inlet. *Range* slider multiplies sample values, *Offset* slider shifts window of values. The pattern can be modulated by an external signal source via the second inlet (switch on Mod. toggle). The *seedR* addon can be used to switch between two pre-set seed values injected into the third inlet of the abstraction.  
 ### Saatgut
 <img src="./assets/saatgut.png" alt="Saatgut" width="400" height="auto">\
 Saatgut is a latent sample player that generates arrays (64-512 datapoints) with randomized values and employs signal input for lookup (e.g. phasor~ for loops). The slider on the right multiplies data point values. Arrays can be saved into and loaded from files.
@@ -16,7 +16,7 @@ Saatgut is a latent sample player that generates arrays (64-512 datapoints) with
 Arseq is a prototype abstraction for latent sequencing. It generates a small array (1-16 datapoints) with manually set values and outputs these consecutively as signals on each bang received through the first inlet either as constants or with a simple envelope applied (decay to 0).
 ### Lateefah
 <img src="./assets/lateefah.png" alt="Lateefah" width="600" height="auto">\
-Lateefah is a family of multichannel signal generators with storage banks that conserves offset constellations for latent dimensions (think: sound presets). The *Modulator* addons semi-automatically browse through the vicinity of the values stored in order to create organically moving sound shifts.
+Lateefah is a family of multichannel signal generators with storage banks that conserves offset constellations for latent dimensions (think: sound presets). The *Modulator* addons semi-automatically goes through the vicinity of the values stored in order to create organically moving sound shifts.
 ### Bender
 <img src="./assets/bender.png" alt="Bender" width="800" height="auto">\
 Bender is inspired by [Błażej Kotowski's work](https://github.com/blazejkotowski) with his fork of nn~ ([nn~ bending](https://github.com/blazejkotowski/nn_tilde_bending)).
